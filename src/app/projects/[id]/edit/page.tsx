@@ -8,6 +8,7 @@ import updateProject from "src/app/projects/mutations/updateProject"
 import { FORM_ERROR, ProjectForm } from "src/app/projects/components/ProjectForm"
 import { UpdateProjectSchema } from "src/app/projects/schemas"
 import { notFound } from "next/navigation"
+import React from "react"
 
 function EditProject({ id }: { id: number }) {
   const [project, { setQueryData }] = useQuery(getProject, { id })
@@ -43,9 +44,17 @@ function EditProject({ id }: { id: number }) {
   )
 }
 
-export default function Page({ params }: { params: { id: string } }) {
+type EditPageProps = {
+  params: {
+    id: string
+  }
+}
+
+const EditPage: React.FC<EditPageProps> = ({ params }) => {
   const projectId = Number(params.id)
-  if (isNaN(projectId)) return notFound()
+  if (isNaN(projectId)) {
+    return notFound()
+  }
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -53,3 +62,5 @@ export default function Page({ params }: { params: { id: string } }) {
     </Suspense>
   )
 }
+
+export default EditPage
