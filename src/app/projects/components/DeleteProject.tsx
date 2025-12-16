@@ -1,6 +1,6 @@
 "use client"
 
-import { useMutation } from "@blitzjs/rpc"
+import { useMutation } from "@blitzjs/next"
 import { useRouter } from "next/navigation"
 import deleteProject from "src/app/projects/mutations/deleteProject"
 

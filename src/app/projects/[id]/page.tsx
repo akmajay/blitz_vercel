@@ -1,6 +1,6 @@
 "use client"
 
-import { useQuery } from "@blitzjs/rpc"
+import { useQuery } from "@blitzjs/next"
 import getProject from "src/app/projects/queries/getProject"
 import { DeleteProject } from "../components/DeleteProject"
 import Link from "next/link"

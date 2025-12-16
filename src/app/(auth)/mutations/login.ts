@@ -1,4 +1,4 @@
-import {resolver} from "@blitzjs/rpc"
+import {resolver} from "blitz"
 import {AuthenticationError} from "blitz"
 import db from "db"
 import {Login} from "../validations"
