@@ -9,7 +9,7 @@ import { FORM_ERROR, ProjectForm } from "src/app/projects/components/ProjectForm
 import { UpdateProjectSchema } from "src/app/projects/schemas"
 import { notFound } from "next/navigation"
 
-export function EditProject({ id }: { id: number }) {
+function EditProject({ id }: { id: number }) {
   const [project, { setQueryData }] = useQuery(getProject, { id })
   const [updateProjectMutation] = useMutation(updateProject)
   const router = useRouter()
