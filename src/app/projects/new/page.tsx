@@ -2,9 +2,9 @@
 
 import { FORM_ERROR, ProjectForm } from "src/app/projects/components/ProjectForm"
 import { CreateProjectSchema } from "src/app/projects/schemas"
-import { useMutation } from "@blitzjs/next"
+import { useMutation } from "@blitzjs/rpc"
 import { useRouter } from "next/navigation"
-import createProject from "src/app/projects/mutations/createProject"
+import createProject from "src/app/projects/mutations/createProject.server"
 
 export default function NewProjectPage() {
   const [createProjectMutation] = useMutation(createProject)

@@ -1,8 +1,8 @@
 "use client"
 
-import { useMutation } from "@blitzjs/next"
+import { useMutation } from "@blitzjs/rpc"
 import { useRouter } from "next/navigation"
-import deleteProject from "src/app/projects/mutations/deleteProject"
+import deleteProject from "src/app/projects/mutations/deleteProject.server"
 
 export function DeleteProject({ id }: { id: number }) {
   const [deleteProjectMutation] = useMutation(deleteProject)

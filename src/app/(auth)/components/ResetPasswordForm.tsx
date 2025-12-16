@@ -3,7 +3,7 @@ import {LabeledTextField} from "src/app/components/LabeledTextField"
 import {Form, FORM_ERROR} from "src/app/components/Form"
 import {ResetPassword} from "../validations"
 import resetPassword from "../mutations/resetPassword"
-import {useMutation} from "@blitzjs/next"
+import {useMutation} from "@blitzjs/rpc"
 import Link from "next/link"
 import {useSearchParams} from "next/navigation"
 

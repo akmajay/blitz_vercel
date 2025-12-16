@@ -3,7 +3,7 @@ import {LabeledTextField} from "src/app/components/LabeledTextField"
 import {Form, FORM_ERROR} from "src/app/components/Form"
 import signup from "../mutations/signup.server"
 import {Signup} from "../validations"
-import {useMutation} from "@blitzjs/next"
+import {useMutation} from "@blitzjs/rpc"
 import {useRouter} from "next/navigation"
 
 type SignupFormProps = {

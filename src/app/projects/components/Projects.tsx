@@ -1,7 +1,7 @@
 "use client"
 
-import { useQuery } from "@blitzjs/next"
-import getProjects from "src/app/projects/queries/getProjects"
+import { useQuery } from "@blitzjs/rpc"
+import getProjects from "src/app/projects/queries/getProjects.server"
 import Link from "next/link"
 
 export const Projects = () => {

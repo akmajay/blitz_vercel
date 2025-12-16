@@ -1,8 +1,10 @@
-import {useAuthenticatedBlitzContext} from "../blitz-server"
+import {AuthRedirector} from "./components/AuthRedirector"
 
 export default async function AuthLayout({children}: {children: React.ReactNode}) {
-  await useAuthenticatedBlitzContext({
-    redirectAuthenticatedTo: "/",
-  })
-  return <>{children}</>
+  return (
+    <>
+      <AuthRedirector redirectAuthenticatedTo="/" />
+      {children}
+    </>
+  )
 }

@@ -1,10 +1,10 @@
-import {setupBlitzServer} from "@blitzjs/next"
-import {AuthServerPlugin, PrismaStorage, simpleRolesIsAuthorized} from "@blitzjs/auth"
+import {setupBlitzServer} from "blitz"
+import {AuthServerPlugin, PrismaStorage, simpleRolesIsAuthorized} from "blitz"
 import db from "db"
 import {BlitzLogger} from "blitz"
 import {authConfig} from "./blitz-auth-config"
 
-const {api, getBlitzContext, useAuthenticatedBlitzContext, invoke,withBlitzAuth} = setupBlitzServer({
+const {api, getBlitzContext, useAuthenticatedBlitzContext} = setupBlitzServer({
   plugins: [
     AuthServerPlugin({
       ...authConfig,
@@ -12,7 +12,7 @@ const {api, getBlitzContext, useAuthenticatedBlitzContext, invoke,withBlitzAuth}
       isAuthorized: simpleRolesIsAuthorized,
     }),
   ],
-  logger: BlitzLogger({}),
+      // logger: BlitzLogger({}),
 })
 
-export {api, getBlitzContext, useAuthenticatedBlitzContext, invoke,withBlitzAuth}
+export {api, getBlitzContext, useAuthenticatedBlitzContext}
