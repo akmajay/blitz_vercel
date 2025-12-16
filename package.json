@@ -38,7 +38,7 @@
     "react-dom": "19.0.0",
     "secure-password": "4.0.0",
     "zod": "3.23.8",
-    "zod-formik-adapter": "^2.2.1"
+    "zod-formik-adapter": "^2.0.0"
   },
   "devDependencies": {
     "@next/env": "15.0.1",
