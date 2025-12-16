@@ -1,7 +1,7 @@
 "use client"
 
 import { Suspense } from "react"
-import { useMutation, useQuery } from "@blitzjs/next"
+import { useMutation, useQuery } from "@blitzjs/rpc"
 import { useRouter } from "next/navigation"
 import getProject from "src/app/projects/queries/getProject"
 import updateProject from "src/app/projects/mutations/updateProject"

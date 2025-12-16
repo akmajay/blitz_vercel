@@ -1,5 +1,4 @@
-import { paginate } from "blitz";
-import { resolver } from "blitz";
+import { paginate, resolver } from "@blitzjs/rpc";
 import db, { Prisma } from "db";
 
 interface GetProjectsInput

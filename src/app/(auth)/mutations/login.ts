@@ -1,5 +1,5 @@
-import {resolver} from "blitz"
-import {AuthenticationError} from "blitz"
+import { resolver } from "@blitzjs/rpc"
+import { AuthenticationError } from "@blitzjs/auth"
 import db from "db"
 import {Login} from "../validations"
 import {SecurePassword} from "@blitzjs/auth/secure-password"
